@@ -31,10 +31,10 @@ const cards: InfoCard[] = [
 ];
 
 const MAPS_EMBED_URL =
-  "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.5!2d-46.587!3d-23.393!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDIzJzM0LjgiUyA0NsKwMzUnMTMuMiJX!5e0!3m2!1spt-BR!2sbr!4v1";
+  "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3658!2d-46.6130611!3d-23.3780991!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cef5c2a76f3b8d%3A0x0!2zQXYuIFBhcnF1ZSBQZXRyw7Nwb2xpcywgMzg3!5e0!3m2!1spt-BR!2sbr";
 
 const MAPS_LINK =
-  "https://www.google.com/maps/search/?api=1&query=Av.+Parque+Petr%C3%B3polis%2C+387%2C+Serra+da+Cantareira%2C+Mairipora%2C+SP";
+  "https://www.google.com/maps/dir/?api=1&destination=-23.3780991,-46.6130611";
 
 const EventInfo = () => (
   <section id="evento" className="py-20 md:py-32 bg-wedding-cream-dark/50">
