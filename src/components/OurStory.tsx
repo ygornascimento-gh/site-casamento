@@ -1,5 +1,6 @@
 import AnimatedSection from "./AnimatedSection";
 import FloralDivider from "./FloralDivider";
+import PhotoCarousel from "./PhotoCarousel";
 import { Heart } from "lucide-react";
 
 interface Milestone {
@@ -57,10 +58,14 @@ const OurStory = () => (
         <p className="text-center text-wedding-text-muted mb-4">
           Do Pasquim ao altar — do nosso jeito
         </p>
-        <FloralDivider className="mb-8" />
+        <FloralDivider className="mb-12" />
       </AnimatedSection>
 
-      <div className="relative">
+      <AnimatedSection delay={0.2}>
+        <PhotoCarousel />
+      </AnimatedSection>
+
+      <div className="mt-16 relative">
         <div className="absolute left-1/2 top-0 bottom-0 w-px bg-wedding-gold/30 -translate-x-1/2" />
 
         {milestones.map((m, i) => (
