@@ -10,24 +10,40 @@ interface Milestone {
 
 const milestones: Milestone[] = [
   {
-    date: "2020",
-    title: "Nos Conhecemos",
-    description: "O destino nos colocou no mesmo caminho e desde entao nao nos separamos mais.",
+    date: "Setembro 2022",
+    title: "Um Restaurante na Vila Madalena",
+    description:
+      "Nos conhecemos no Pasquim, na Vila Madalena. A calma dela, a voz doce, o olhar carinhoso — e muitas risadas sobre historias da vida. Daquelas noites que a gente sente que nao quer que acabe.",
   },
   {
-    date: "2021",
-    title: "Primeiro Namoro",
-    description: "Decidimos oficializar o que ja era obvio para todos ao nosso redor.",
+    date: "2022",
+    title: "O Namoro Mais Espontaneo do Mundo",
+    description:
+      "Fomos jantar em um japones. No fim da noite, a mae dele ligou e ele soltou: \"to aqui com a minha namorada.\" Ela cerrou a sobrancelha: \"estamos namorando?\" E ele: \"ue, precisa perguntar? Voce quer namorar comigo?\" Ela disse sim — e nao paramos de rir.",
   },
   {
-    date: "2025",
-    title: "O Pedido",
-    description: "Com o coracao acelerado, a pergunta mais importante foi feita — e a resposta foi sim!",
+    date: "2022 — 2023",
+    title: "A Nossa Cara",
+    description:
+      "Sempre fomos caseiros. Nosso programa favorito? Filme, ficar juntos curtindo a so — e de repente uma mala pronta pra Paraty, Monte Verde ou o litoral de SP. A gente ri demais, brinca demais. Calma, paciencia, leveza e muita parceria.",
   },
   {
-    date: "2026",
+    date: "Janeiro 2024",
+    title: "Morar Juntos",
+    description:
+      "Depois de muito pastel na feira aos sabados e domingos grudados, decidimos que nao fazia mais sentido voltar cada um pra sua casa. Passamos a dividir o dia a dia — e descobrimos que juntos e ainda melhor.",
+  },
+  {
+    date: "2024",
+    title: "O Pedido (No Japones, Claro)",
+    description:
+      "Ele a convidou pra um japones — porque grandes momentos merecem o lugar certo. No fim do jantar, pediu ela em casamento. A resposta? \"Pensei que nao ia pedir... que demora!\" Riram muito. Do jeito deles. Perfeito.",
+  },
+  {
+    date: "18 de Setembro 2026",
     title: "O Grande Dia",
-    description: "18 de Setembro — o dia em que nos tornamos um so.",
+    description:
+      "Depois de muitas risadas, viagens, feiras de sabado e domingos no sofa — chega o dia de celebrar tudo isso com quem a gente ama. Vem ser feliz com a gente!",
   },
 ];
 
@@ -39,7 +55,7 @@ const OurStory = () => (
           Nossa Historia
         </h2>
         <p className="text-center text-wedding-text-muted mb-4">
-          Os momentos que nos trouxeram ate aqui
+          Do Pasquim ao altar — do nosso jeito
         </p>
         <FloralDivider className="mb-8" />
       </AnimatedSection>
