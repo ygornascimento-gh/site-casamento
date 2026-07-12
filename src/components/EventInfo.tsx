@@ -1,5 +1,5 @@
 import AnimatedSection from "./AnimatedSection";
-import { MapPin, Clock, Shirt, PartyPopper } from "lucide-react";
+import { MapPin, Clock, Shirt, PartyPopper, Navigation } from "lucide-react";
 
 interface InfoCard {
   icon: typeof MapPin;
@@ -10,18 +10,18 @@ interface InfoCard {
 const cards: InfoCard[] = [
   {
     icon: Clock,
-    title: "Cerimonia",
+    title: "Cerimônia",
     lines: ["16:00", "18 de Setembro de 2026"],
   },
   {
     icon: PartyPopper,
-    title: "Recepcao",
+    title: "Recepção",
     lines: ["18:00", "No mesmo local"],
   },
   {
     icon: MapPin,
     title: "Local",
-    lines: ["A definir", "Cidade - Estado"],
+    lines: ["Av. Parque Petrópolis, 387", "Serra da Cantareira, Mairiporã – SP"],
   },
   {
     icon: Shirt,
@@ -30,15 +30,21 @@ const cards: InfoCard[] = [
   },
 ];
 
+const MAPS_EMBED_URL =
+  "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.5!2d-46.587!3d-23.393!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDIzJzM0LjgiUyA0NsKwMzUnMTMuMiJX!5e0!3m2!1spt-BR!2sbr!4v1";
+
+const MAPS_LINK =
+  "https://www.google.com/maps/search/?api=1&query=Av.+Parque+Petr%C3%B3polis%2C+387%2C+Serra+da+Cantareira%2C+Mairipora%2C+SP";
+
 const EventInfo = () => (
   <section id="evento" className="py-20 md:py-32 bg-wedding-cream-dark/50">
     <div className="container max-w-4xl">
       <AnimatedSection>
         <h2 className="font-script text-4xl md:text-5xl text-wedding-rose text-center mb-4">
-          Informacoes
+          Informações
         </h2>
         <p className="text-center text-wedding-text-muted mb-16">
-          Tudo que voce precisa saber sobre o grande dia
+          Tudo que você precisa saber sobre o grande dia
         </p>
       </AnimatedSection>
 
@@ -61,6 +67,59 @@ const EventInfo = () => (
           </AnimatedSection>
         ))}
       </div>
+
+      <AnimatedSection delay={0.5}>
+        <div className="mt-12 rounded-2xl overflow-hidden border border-wedding-gold/10 shadow-sm">
+          <div className="bg-white/80 backdrop-blur-sm p-5 flex items-center justify-between">
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-full bg-wedding-rose/10 flex items-center justify-center">
+                <MapPin size={18} className="text-wedding-rose" />
+              </div>
+              <div>
+                <p className="font-serif font-semibold text-wedding-text">
+                  Av. Parque Petrópolis, 387
+                </p>
+                <p className="text-sm text-wedding-text-muted">
+                  Serra da Cantareira, Mairiporã – SP
+                </p>
+              </div>
+            </div>
+            <a
+              href={MAPS_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden sm:inline-flex items-center gap-2 bg-wedding-rose text-white px-5 py-2.5 rounded-full text-sm font-medium hover:bg-wedding-rose-dark transition-colors"
+            >
+              <Navigation size={14} />
+              Como chegar
+            </a>
+          </div>
+
+          <iframe
+            src={MAPS_EMBED_URL}
+            width="100%"
+            height="300"
+            style={{ border: 0 }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            title="Localização do evento"
+            className="w-full"
+          />
+
+          <div className="sm:hidden bg-white/80 p-4">
+            <a
+              href={MAPS_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-2 bg-wedding-rose text-white px-5 py-3 rounded-full text-sm font-medium hover:bg-wedding-rose-dark transition-colors w-full"
+            >
+              <Navigation size={14} />
+              Como chegar
+            </a>
+          </div>
+        </div>
+      </AnimatedSection>
     </div>
   </section>
 );
