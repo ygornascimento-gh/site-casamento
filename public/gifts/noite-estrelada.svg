@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" fill="none">
+  <rect width="400" height="240" fill="#FDF8F5"/>
+  <!-- Night sky gradient circle -->
+  <circle cx="200" cy="100" r="80" fill="#3D3533" opacity="0.06"/>
+  <circle cx="200" cy="100" r="60" fill="#3D3533" opacity="0.04"/>
+  <!-- Moon -->
+  <circle cx="240" cy="60" r="18" fill="#D4A574" opacity="0.25"/>
+  <circle cx="248" cy="55" r="15" fill="#FDF8F5"/>
+  <!-- Stars -->
+  <g fill="#D4A574" opacity="0.4">
+    <polygon points="130,50 132,55 137,55 133,58 135,63 130,60 125,63 127,58 123,55 128,55"/>
+    <polygon points="170,40 171,43 174,43 172,45 173,48 170,46 167,48 168,45 166,43 169,43" transform="scale(0.8) translate(35 8)"/>
+    <polygon points="280,70 282,75 287,75 283,78 285,83 280,80 275,83 277,78 273,75 278,75" transform="scale(0.7) translate(85 25)"/>
+  </g>
+  <!-- Small stars as dots -->
+  <circle cx="160" cy="55" r="1.5" fill="#D4A574" opacity="0.35"/>
+  <circle cx="300" cy="50" r="1" fill="#D4A574" opacity="0.3"/>
+  <circle cx="120" cy="80" r="1" fill="#D4A574" opacity="0.25"/>
+  <circle cx="270" cy="45" r="1.5" fill="#D4A574" opacity="0.3"/>
+  <circle cx="180" cy="70" r="1" fill="#D4A574" opacity="0.2"/>
+  <!-- Couple silhouette -->
+  <circle cx="190" cy="130" r="8" fill="#3D3533" opacity="0.1"/>
+  <circle cx="210" cy="128" r="9" fill="#3D3533" opacity="0.1"/>
+  <rect x="183" y="138" width="14" height="20" rx="4" fill="#3D3533" opacity="0.08"/>
+  <rect x="203" y="136" width="14" height="22" rx="4" fill="#3D3533" opacity="0.08"/>
+  <!-- Blanket -->
+  <ellipse cx="200" cy="165" rx="40" ry="8" fill="#F2B5C8" opacity="0.2"/>
+  <!-- Heart -->
+  <path d="M195 110c0-4 3-7 6-7s6 3 6 7c0 9-6 14-6 14s-6-5-6-14z" fill="#F2B5C8" opacity="0.4"/>
+  <text x="200" y="210" text-anchor="middle" font-family="serif" font-size="14" fill="#3D3533" opacity="0.6">Noite Estrelada</text>
+</svg>

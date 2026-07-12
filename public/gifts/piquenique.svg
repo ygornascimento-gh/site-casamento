@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" fill="none">
+  <rect width="400" height="240" fill="#FDF8F5"/>
+  <!-- Grass -->
+  <ellipse cx="200" cy="180" rx="160" ry="20" fill="#A8B5A0" opacity="0.12"/>
+  <!-- Blanket -->
+  <path d="M120 140 L200 120 L280 140 L200 160Z" fill="#F2B5C8" opacity="0.2" stroke="#F2B5C8" stroke-width="1" stroke-opacity="0.3"/>
+  <!-- Basket -->
+  <rect x="175" y="100" width="50" height="30" rx="5" fill="#D4A574" opacity="0.3"/>
+  <path d="M175 100 Q200 80 225 100" stroke="#D4A574" stroke-width="2" fill="none" opacity="0.35"/>
+  <!-- Weave pattern -->
+  <line x1="185" y1="105" x2="185" y2="125" stroke="#D4A574" stroke-width="0.8" opacity="0.2"/>
+  <line x1="195" y1="105" x2="195" y2="125" stroke="#D4A574" stroke-width="0.8" opacity="0.2"/>
+  <line x1="205" y1="105" x2="205" y2="125" stroke="#D4A574" stroke-width="0.8" opacity="0.2"/>
+  <line x1="215" y1="105" x2="215" y2="125" stroke="#D4A574" stroke-width="0.8" opacity="0.2"/>
+  <!-- Wine bottle -->
+  <rect x="250" y="108" width="12" height="28" rx="3" fill="#A8B5A0" opacity="0.25"/>
+  <rect x="253" y="100" width="6" height="10" rx="2" fill="#A8B5A0" opacity="0.2"/>
+  <!-- Wine glasses -->
+  <line x1="140" y1="115" x2="140" y2="135" stroke="#D4A574" stroke-width="1.5" opacity="0.25"/>
+  <path d="M132 115 Q140 100 148 115" stroke="#D4A574" stroke-width="1.5" fill="none" opacity="0.25"/>
+  <line x1="135" y1="135" x2="145" y2="135" stroke="#D4A574" stroke-width="1.5" opacity="0.25"/>
+  <!-- Tree -->
+  <rect x="315" y="100" width="8" height="60" rx="2" fill="#A8B5A0" opacity="0.15"/>
+  <circle cx="319" cy="80" r="25" fill="#A8B5A0" opacity="0.12"/>
+  <circle cx="308" cy="90" r="18" fill="#A8B5A0" opacity="0.1"/>
+  <circle cx="330" cy="88" r="18" fill="#A8B5A0" opacity="0.1"/>
+  <!-- Flowers -->
+  <circle cx="100" cy="155" r="4" fill="#F2B5C8" opacity="0.3"/>
+  <circle cx="108" cy="150" r="3" fill="#D4A574" opacity="0.25"/>
+  <circle cx="295" cy="158" r="3" fill="#F2B5C8" opacity="0.25"/>
+  <!-- Heart -->
+  <path d="M195 75c0-4 3-7 6-7s6 3 6 7c0 9-6 14-6 14s-6-5-6-14z" fill="#F2B5C8" opacity="0.4"/>
+  <text x="200" y="210" text-anchor="middle" font-family="serif" font-size="14" fill="#3D3533" opacity="0.6">Piquenique Romantico</text>
+</svg>

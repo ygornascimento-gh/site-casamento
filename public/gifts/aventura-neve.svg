@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" fill="none">
+  <rect width="400" height="240" fill="#FDF8F5"/>
+  <!-- Snow mountains -->
+  <polygon points="60,175 140,70 220,175" fill="#A8B5A0" opacity="0.15"/>
+  <polygon points="100,175 140,85 165,115 200,65 280,175" fill="#A8B5A0" opacity="0.12"/>
+  <!-- Snow caps -->
+  <polygon points="130,82 140,70 150,82 145,80 140,85 135,80" fill="white" opacity="0.6"/>
+  <polygon points="190,77 200,65 210,77 205,75 200,80 195,75" fill="white" opacity="0.6"/>
+  <!-- Snowflakes -->
+  <g opacity="0.3" fill="#A8B5A0">
+    <circle cx="100" cy="50" r="2"/><line x1="100" y1="44" x2="100" y2="56" stroke="#A8B5A0" stroke-width="1"/>
+    <line x1="94" y1="50" x2="106" y2="50" stroke="#A8B5A0" stroke-width="1"/>
+  </g>
+  <g opacity="0.25" fill="#A8B5A0">
+    <circle cx="280" cy="60" r="2"/><line x1="280" y1="55" x2="280" y2="65" stroke="#A8B5A0" stroke-width="1"/>
+    <line x1="275" y1="60" x2="285" y2="60" stroke="#A8B5A0" stroke-width="1"/>
+  </g>
+  <g opacity="0.2" fill="#A8B5A0">
+    <circle cx="320" cy="100" r="1.5"/><line x1="320" y1="96" x2="320" y2="104" stroke="#A8B5A0" stroke-width="0.8"/>
+    <line x1="316" y1="100" x2="324" y2="100" stroke="#A8B5A0" stroke-width="0.8"/>
+  </g>
+  <!-- Scarf -->
+  <rect x="185" y="120" width="30" height="8" rx="3" fill="#F2B5C8" opacity="0.4"/>
+  <rect x="210" y="118" width="8" height="25" rx="3" fill="#F2B5C8" opacity="0.35"/>
+  <!-- Hot chocolate -->
+  <rect x="175" y="140" width="22" height="18" rx="4" fill="#D4A574" opacity="0.3"/>
+  <path d="M197 146 Q205 146 205 151 Q205 156 197 156" stroke="#D4A574" stroke-width="1.5" fill="none" opacity="0.25"/>
+  <path d="M181 136 Q184 130 187 136" stroke="#D4A574" stroke-width="1" fill="none" opacity="0.25"/>
+  <!-- Hearts -->
+  <path d="M240 110c0-4 3-7 6-7s6 3 6 7c0 9-6 14-6 14s-6-5-6-14z" fill="#F2B5C8" opacity="0.35"/>
+  <text x="200" y="210" text-anchor="middle" font-family="serif" font-size="14" fill="#3D3533" opacity="0.6">Aventura na Neve</text>
+</svg>

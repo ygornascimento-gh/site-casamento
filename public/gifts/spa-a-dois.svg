@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" fill="none">
+  <rect width="400" height="240" fill="#FDF8F5"/>
+  <circle cx="200" cy="110" r="75" fill="#A8B5A0" opacity="0.08"/>
+  <!-- Leaf/Lotus -->
+  <ellipse cx="200" cy="100" rx="30" ry="15" fill="#A8B5A0" opacity="0.25" transform="rotate(-30 200 100)"/>
+  <ellipse cx="200" cy="100" rx="30" ry="15" fill="#A8B5A0" opacity="0.25" transform="rotate(30 200 100)"/>
+  <ellipse cx="200" cy="100" rx="30" ry="15" fill="#A8B5A0" opacity="0.2"/>
+  <circle cx="200" cy="100" r="8" fill="#F2B5C8" opacity="0.4"/>
+  <!-- Steam/relaxation waves -->
+  <path d="M170 70 Q175 60 180 70" stroke="#D4A574" stroke-width="1.5" fill="none" opacity="0.3"/>
+  <path d="M195 60 Q200 50 205 60" stroke="#D4A574" stroke-width="1.5" fill="none" opacity="0.3"/>
+  <path d="M220 68 Q225 58 230 68" stroke="#D4A574" stroke-width="1.5" fill="none" opacity="0.3"/>
+  <!-- Candles -->
+  <rect x="130" y="130" width="12" height="25" rx="3" fill="#D4A574" opacity="0.3"/>
+  <ellipse cx="136" cy="128" rx="4" ry="6" fill="#F2B5C8" opacity="0.5"/>
+  <rect x="258" y="130" width="12" height="25" rx="3" fill="#D4A574" opacity="0.3"/>
+  <ellipse cx="264" cy="128" rx="4" ry="6" fill="#F2B5C8" opacity="0.5"/>
+  <!-- Decorative stones -->
+  <ellipse cx="180" cy="155" rx="10" ry="7" fill="#7A6E6B" opacity="0.15"/>
+  <ellipse cx="200" cy="152" rx="10" ry="7" fill="#7A6E6B" opacity="0.12"/>
+  <ellipse cx="220" cy="155" rx="10" ry="7" fill="#7A6E6B" opacity="0.15"/>
+  <!-- Hearts -->
+  <path d="M280 80c0-3 3-6 6-6s6 3 6 6c0 8-6 12-6 12s-6-4-6-12z" fill="#F2B5C8" opacity="0.3"/>
+  <text x="200" y="205" text-anchor="middle" font-family="serif" font-size="14" fill="#3D3533" opacity="0.6">Dia de Spa a Dois</text>
+</svg>

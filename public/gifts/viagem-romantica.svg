@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" fill="none">
+  <rect width="400" height="240" fill="#FDF8F5"/>
+  <!-- Mountains -->
+  <polygon points="80,170 160,80 240,170" fill="#A8B5A0" opacity="0.2"/>
+  <polygon points="180,170 260,90 340,170" fill="#A8B5A0" opacity="0.15"/>
+  <!-- Sun -->
+  <circle cx="300" cy="60" r="25" fill="#D4A574" opacity="0.25"/>
+  <circle cx="300" cy="60" r="18" fill="#D4A574" opacity="0.15"/>
+  <!-- Suitcase -->
+  <rect x="165" y="130" width="70" height="50" rx="8" fill="#F2B5C8" opacity="0.3" stroke="#F2B5C8" stroke-width="2" stroke-opacity="0.5"/>
+  <rect x="185" y="122" width="30" height="12" rx="5" fill="none" stroke="#F2B5C8" stroke-width="2" stroke-opacity="0.5"/>
+  <line x1="200" y1="142" x2="200" y2="168" stroke="#F2B5C8" stroke-width="1.5" stroke-opacity="0.4"/>
+  <line x1="178" y1="155" x2="222" y2="155" stroke="#F2B5C8" stroke-width="1.5" stroke-opacity="0.4"/>
+  <!-- Airplane -->
+  <path d="M100 50 L115 45 L125 50 L115 55Z" fill="#D4A574" opacity="0.4"/>
+  <line x1="115" y1="50" x2="90" y2="55" stroke="#D4A574" stroke-width="1.5" opacity="0.3" stroke-dasharray="3 3"/>
+  <!-- Heart -->
+  <path d="M192 105c0-5 4-9 8-9s8 4 8 9c0 12-8 18-8 18s-8-6-8-18z" fill="#F2B5C8" opacity="0.5"/>
+  <!-- Decorative -->
+  <circle cx="70" cy="100" r="2" fill="#D4A574" opacity="0.3"/>
+  <circle cx="340" cy="130" r="3" fill="#A8B5A0" opacity="0.3"/>
+  <text x="200" y="210" text-anchor="middle" font-family="serif" font-size="14" fill="#3D3533" opacity="0.6">Viagem Romantica</text>
+</svg>

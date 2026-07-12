@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" fill="none">
+  <rect width="400" height="240" fill="#FDF8F5"/>
+  <!-- Gradient background circle -->
+  <circle cx="200" cy="105" r="80" fill="#F2B5C8" opacity="0.06"/>
+  <!-- Palm tree -->
+  <rect x="105" y="100" width="6" height="70" rx="2" fill="#A8B5A0" opacity="0.2" transform="rotate(-5 108 135)"/>
+  <path d="M80 95 Q108 80 115 100" stroke="#A8B5A0" stroke-width="3" fill="none" opacity="0.2"/>
+  <path d="M108 85 Q125 70 140 90" stroke="#A8B5A0" stroke-width="3" fill="none" opacity="0.2"/>
+  <path d="M95 90 Q108 75 120 85" stroke="#A8B5A0" stroke-width="2.5" fill="none" opacity="0.18"/>
+  <!-- Water -->
+  <path d="M0 160 Q100 150 200 160 Q300 170 400 160 L400 240 L0 240Z" fill="#A8B5A0" opacity="0.1"/>
+  <!-- Airplane -->
+  <path d="M220 55 L250 50 L265 55 L250 60Z" fill="#D4A574" opacity="0.3"/>
+  <line x1="250" y1="55" x2="200" y2="65" stroke="#D4A574" stroke-width="1" opacity="0.2" stroke-dasharray="4 3"/>
+  <!-- Two hearts intertwined -->
+  <path d="M185 110c0-8 6-14 12-14s12 6 12 14c0 18-12 28-12 28s-12-10-12-28z" fill="#F2B5C8" opacity="0.3"/>
+  <path d="M195 108c0-7 5-12 10-12s10 5 10 12c0 16-10 24-10 24s-10-8-10-24z" fill="#D4A574" opacity="0.2"/>
+  <!-- Ring -->
+  <circle cx="270" cy="120" r="12" fill="none" stroke="#D4A574" stroke-width="2.5" opacity="0.3"/>
+  <circle cx="270" cy="110" r="4" fill="#D4A574" opacity="0.25"/>
+  <!-- Stars -->
+  <circle cx="300" cy="45" r="2" fill="#D4A574" opacity="0.3"/>
+  <circle cx="170" cy="40" r="1.5" fill="#D4A574" opacity="0.25"/>
+  <circle cx="330" cy="70" r="1.5" fill="#D4A574" opacity="0.2"/>
+  <text x="200" y="210" text-anchor="middle" font-family="serif" font-size="14" fill="#3D3533" opacity="0.6">Lua de Mel</text>
+</svg>

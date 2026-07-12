@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" fill="none">
+  <rect width="400" height="240" fill="#FDF8F5"/>
+  <circle cx="200" cy="110" r="70" fill="#F2B5C8" opacity="0.06"/>
+  <!-- Board game board -->
+  <rect x="145" y="85" width="110" height="80" rx="6" fill="#D4A574" opacity="0.12" stroke="#D4A574" stroke-width="1.5" stroke-opacity="0.2"/>
+  <!-- Grid lines -->
+  <line x1="172" y1="85" x2="172" y2="165" stroke="#D4A574" stroke-width="0.8" opacity="0.12"/>
+  <line x1="200" y1="85" x2="200" y2="165" stroke="#D4A574" stroke-width="0.8" opacity="0.12"/>
+  <line x1="228" y1="85" x2="228" y2="165" stroke="#D4A574" stroke-width="0.8" opacity="0.12"/>
+  <line x1="145" y1="112" x2="255" y2="112" stroke="#D4A574" stroke-width="0.8" opacity="0.12"/>
+  <line x1="145" y1="138" x2="255" y2="138" stroke="#D4A574" stroke-width="0.8" opacity="0.12"/>
+  <!-- Game pieces -->
+  <circle cx="186" cy="98" r="8" fill="#F2B5C8" opacity="0.4"/>
+  <circle cx="214" cy="125" r="8" fill="#A8B5A0" opacity="0.4"/>
+  <circle cx="186" cy="152" r="8" fill="#D4A574" opacity="0.35"/>
+  <!-- Dice -->
+  <rect x="275" y="100" width="28" height="28" rx="5" fill="white" stroke="#D4A574" stroke-width="1.5" stroke-opacity="0.3" transform="rotate(15 289 114)"/>
+  <circle cx="283" cy="108" r="2" fill="#3D3533" opacity="0.25"/>
+  <circle cx="295" cy="108" r="2" fill="#3D3533" opacity="0.25"/>
+  <circle cx="289" cy="114" r="2" fill="#3D3533" opacity="0.25"/>
+  <circle cx="283" cy="120" r="2" fill="#3D3533" opacity="0.25"/>
+  <circle cx="295" cy="120" r="2" fill="#3D3533" opacity="0.25"/>
+  <!-- Cards -->
+  <rect x="90" y="105" width="30" height="42" rx="4" fill="#F2B5C8" opacity="0.2" stroke="#F2B5C8" stroke-width="1" stroke-opacity="0.3" transform="rotate(-10 105 126)"/>
+  <rect x="100" y="102" width="30" height="42" rx="4" fill="#A8B5A0" opacity="0.15" stroke="#A8B5A0" stroke-width="1" stroke-opacity="0.25" transform="rotate(5 115 123)"/>
+  <!-- Heart -->
+  <path d="M195 60c0-4 3-7 6-7s6 3 6 7c0 9-6 14-6 14s-6-5-6-14z" fill="#F2B5C8" opacity="0.4"/>
+  <text x="200" y="210" text-anchor="middle" font-family="serif" font-size="14" fill="#3D3533" opacity="0.6">Noite de Jogos</text>
+</svg>

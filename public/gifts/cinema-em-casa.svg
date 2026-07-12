@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" fill="none">
+  <rect width="400" height="240" fill="#FDF8F5"/>
+  <circle cx="200" cy="105" r="70" fill="#A8B5A0" opacity="0.1"/>
+  <!-- TV/Screen -->
+  <rect x="145" y="65" width="110" height="70" rx="6" fill="#3D3533" opacity="0.1" stroke="#D4A574" stroke-width="2"/>
+  <rect x="152" y="72" width="96" height="56" rx="3" fill="#A8B5A0" opacity="0.15"/>
+  <!-- Play button -->
+  <polygon points="190,92 190,112 210,102" fill="#F2B5C8" opacity="0.8"/>
+  <!-- Couch/sofa -->
+  <rect x="135" y="150" width="130" height="25" rx="12" fill="#D4A574" opacity="0.3"/>
+  <rect x="130" y="145" width="20" height="35" rx="8" fill="#D4A574" opacity="0.25"/>
+  <rect x="250" y="145" width="20" height="35" rx="8" fill="#D4A574" opacity="0.25"/>
+  <!-- Popcorn -->
+  <rect x="282" y="90" width="25" height="35" rx="3" fill="#D4A574" opacity="0.4" transform="rotate(10 294 107)"/>
+  <circle cx="288" cy="88" r="5" fill="#FDF8F5" stroke="#D4A574" stroke-width="1" opacity="0.6"/>
+  <circle cx="296" cy="86" r="4" fill="#FDF8F5" stroke="#D4A574" stroke-width="1" opacity="0.6"/>
+  <circle cx="292" cy="82" r="4" fill="#FDF8F5" stroke="#D4A574" stroke-width="1" opacity="0.6"/>
+  <!-- Hearts -->
+  <path d="M110 70c0-4 3-7 7-7s7 3 7 7c0 9-7 14-7 14s-7-5-7-14z" fill="#F2B5C8" opacity="0.35" transform="rotate(10 117 74)"/>
+  <text x="200" y="210" text-anchor="middle" font-family="serif" font-size="14" fill="#3D3533" opacity="0.6">Cinema em Casa</text>
+</svg>

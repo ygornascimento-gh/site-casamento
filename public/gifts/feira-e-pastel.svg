@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" fill="none">
+  <rect width="400" height="240" fill="#FDF8F5"/>
+  <circle cx="200" cy="110" r="70" fill="#D4A574" opacity="0.08"/>
+  <!-- Market stand/tent -->
+  <polygon points="130,80 200,55 270,80" fill="#F2B5C8" opacity="0.2"/>
+  <polygon points="140,80 200,60 260,80" fill="#F2B5C8" opacity="0.15" stroke="#F2B5C8" stroke-width="1" stroke-opacity="0.3"/>
+  <line x1="140" y1="80" x2="140" y2="140" stroke="#D4A574" stroke-width="2" opacity="0.3"/>
+  <line x1="260" y1="80" x2="260" y2="140" stroke="#D4A574" stroke-width="2" opacity="0.3"/>
+  <!-- Pastel (Brazilian pastry) -->
+  <path d="M170 110 Q175 95 200 95 Q225 95 230 110 Q225 125 200 125 Q175 125 170 110Z" fill="#D4A574" opacity="0.35" stroke="#D4A574" stroke-width="1.5" stroke-opacity="0.4"/>
+  <!-- Fork pattern on pastel edge -->
+  <path d="M175 105 Q178 102 175 99" stroke="#D4A574" stroke-width="1" opacity="0.3" fill="none"/>
+  <path d="M180 103 Q183 100 180 97" stroke="#D4A574" stroke-width="1" opacity="0.3" fill="none"/>
+  <path d="M220 103 Q223 100 220 97" stroke="#D4A574" stroke-width="1" opacity="0.3" fill="none"/>
+  <path d="M225 105 Q228 102 225 99" stroke="#D4A574" stroke-width="1" opacity="0.3" fill="none"/>
+  <!-- Coffee cup -->
+  <rect x="280" y="105" width="25" height="22" rx="4" fill="#7A6E6B" opacity="0.15" stroke="#7A6E6B" stroke-width="1.5" stroke-opacity="0.2"/>
+  <path d="M305 112 Q315 112 315 118 Q315 124 305 124" stroke="#7A6E6B" stroke-width="1.5" fill="none" opacity="0.2"/>
+  <path d="M287 100 Q290 92 293 100" stroke="#7A6E6B" stroke-width="1" fill="none" opacity="0.2"/>
+  <!-- Fruits -->
+  <circle cx="105" cy="110" r="8" fill="#A8B5A0" opacity="0.25"/>
+  <circle cx="115" cy="105" r="7" fill="#F2B5C8" opacity="0.25"/>
+  <circle cx="110" cy="118" r="6" fill="#D4A574" opacity="0.2"/>
+  <!-- Heart -->
+  <path d="M195 140c0-4 3-7 6-7s6 3 6 7c0 9-6 14-6 14s-6-5-6-14z" fill="#F2B5C8" opacity="0.4"/>
+  <text x="200" y="205" text-anchor="middle" font-family="serif" font-size="14" fill="#3D3533" opacity="0.6">Sabado na Feira</text>
+</svg>
