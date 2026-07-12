@@ -21,7 +21,7 @@ const cards: InfoCard[] = [
   {
     icon: MapPin,
     title: "Local",
-    lines: ["Av. Parque Petrópolis, 387", "Serra da Cantareira, Mairiporã – SP"],
+    lines: ["Espaço Alpes Serrano", "Av. Parque Petrópolis, 387", "Serra da Cantareira, Mairiporã – SP"],
   },
   {
     icon: Shirt,
@@ -31,10 +31,10 @@ const cards: InfoCard[] = [
 ];
 
 const MAPS_EMBED_URL =
-  "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3658!2d-46.6130611!3d-23.3780991!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cef5c2a76f3b8d%3A0x0!2zQXYuIFBhcnF1ZSBQZXRyw7Nwb2xpcywgMzg3!5e0!3m2!1spt-BR!2sbr";
+  "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658!2d-46.6130611!3d-23.3780991!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cef5c2a76f3b8d%3A0x0!2sEspa%C3%A7o+Alpes+Serrano!5e0!3m2!1spt-BR!2sbr";
 
 const MAPS_LINK =
-  "https://www.google.com/maps/dir/?api=1&destination=-23.3780991,-46.6130611";
+  "https://www.google.com/maps/dir/?api=1&destination=Espa%C3%A7o+Alpes+Serrano+Av+Parque+Petropolis+387+Mairipora+SP";
 
 const EventInfo = () => (
   <section id="evento" className="py-20 md:py-32 bg-wedding-cream-dark/50">
@@ -77,10 +77,10 @@ const EventInfo = () => (
               </div>
               <div>
                 <p className="font-serif font-semibold text-wedding-text">
-                  Av. Parque Petrópolis, 387
+                  Espaço Alpes Serrano
                 </p>
                 <p className="text-sm text-wedding-text-muted">
-                  Serra da Cantareira, Mairiporã – SP
+                  Av. Parque Petrópolis, 387 – Serra da Cantareira, Mairiporã – SP
                 </p>
               </div>
             </div>
