@@ -74,7 +74,7 @@ const GiftList = () => {
             Lista de Presentes
           </h2>
           <p className="text-center text-wedding-text-muted mb-16">
-            Experiencias valem mais que coisas — escolha um momento pra gente viver
+            Presentes criativos e divertidos — escolha o seu e faca a gente rir!
           </p>
         </AnimatedSection>
 

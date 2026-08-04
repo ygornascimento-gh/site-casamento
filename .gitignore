@@ -26,3 +26,7 @@ npm-debug.log*
 
 # OS
 .DS_Store
+.vercel
+
+# Source photos
+FOTOS_CASAMENTO/

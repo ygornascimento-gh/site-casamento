@@ -97,20 +97,22 @@ CREATE POLICY "Allow public select approved messages"
   USING (aprovado = true);
 
 -- ============================================================
--- Seed: experiential gifts (non-material, based on couple's story)
+-- Seed: lista de presentes criativa e divertida
 -- ============================================================
 
-INSERT INTO presentes (nome, descricao, valor, imagem_url) VALUES
-  ('Jantar Japones Especial', 'Um jantar no nosso lugar favorito — onde tudo comecou e onde o pedido aconteceu.', 350.00, '/gifts/jantar-japones.svg'),
-  ('Noite de Cinema em Casa', 'Nosso programa favorito: pipoca, cobertas e um filme bom.', 200.00, '/gifts/cinema-em-casa.svg'),
-  ('Viagem Romantica', 'De Paraty a Monte Verde, a gente adora fazer as malas. Contribua para a proxima aventura!', 500.00, '/gifts/viagem-romantica.svg'),
-  ('Dia de Spa a Dois', 'Um dia inteiro de calma, massagem e relaxamento — a cara do nosso jeito de curtir.', 400.00, '/gifts/spa-a-dois.svg'),
-  ('Sabado na Feira', 'Pastel, caldo de cana e frutas frescas — o ritual sagrado de todo sabado.', 150.00, '/gifts/feira-e-pastel.svg'),
-  ('Aventura na Neve', 'Las Lenas ja foi, e a gente quer mais! Ajude o casal a voltar pra neve.', 800.00, '/gifts/aventura-neve.svg'),
-  ('Noite Estrelada', 'Uma noite romantica ao ar livre, com vista pro ceu.', 250.00, '/gifts/noite-estrelada.svg'),
-  ('Dia de Praia', 'Guaruja, litoral de SP — o importante e estar juntos com pe na areia.', 300.00, '/gifts/dia-de-praia.svg'),
-  ('Aula de Culinaria a Dois', 'Queremos aprender a cozinhar junto — de massas italianas a sushi (claro).', 350.00, '/gifts/aula-culinaria.svg'),
-  ('Piquenique Romantico', 'Cesta, vinho, queijos e uma toalha xadrez no parque. Simples e a nossa cara.', 200.00, '/gifts/piquenique.svg'),
-  ('Lua de Mel', 'O grande sonho pos-casamento! Qualquer valor ajuda a tornar essa viagem inesquecivel.', 1000.00, '/gifts/lua-de-mel.svg'),
-  ('Experiencia Gastronomica', 'Jantar degustacao num restaurante especial com harmonizacao de vinhos.', 450.00, '/gifts/experiencia-gastronomica.svg'),
-  ('Noite de Jogos', 'Board games, cartas e muita risada — ajude a expandir a colecao!', 180.00, '/gifts/noite-jogos.svg');
+INSERT INTO presentes (nome, valor, imagem_url) VALUES
+  ('Só pra não dizer que não dei nada', 104.05, '/gifts/memes/so-pra-nao-dizer.jpg'),
+  ('Taxa pra a noiva não jogar o buquê para sua namorada', 150.00, '/gifts/memes/taxa-buque-namorada-150.jpg'),
+  ('Agenda para o noivo anotar sempre que a noiva estiver certa', 100.00, '/gifts/memes/agenda-noivo.jpg'),
+  ('Cobertor para o noivo estar coberto de razão', 208.09, '/gifts/memes/cobertor-noivo-razao.jpg'),
+  ('Cota para o robô aspirador evitar a fadiga', 245.80, '/gifts/memes/robo-aspirador.jpg'),
+  ('Massagem para o noivo relaxar antes de ver a fatura do cartão', 300.00, '/gifts/memes/massagem-noivo.jpg'),
+  ('1 ano de corte de cabelo para o noivo', 416.19, '/gifts/memes/1-ano-corte-cabelo.jpg'),
+  ('Capacete para o noivo se defender do pau de macarrão', 430.00, '/gifts/memes/capacete-noivo.jpg'),
+  ('Taxa para a noiva não jogar o buquê na sua namorada', 468.21, '/gifts/memes/taxa-buque-namorada-468.jpg'),
+  ('Cobertor pra noiva estar sempre coberta de razão', 510.00, '/gifts/memes/cobertor-noiva-razao.jpg'),
+  ('Adote um boleto do casal', 630.89, '/gifts/memes/adote-boleto.jpg'),
+  ('Ajuda para pagar a fatura do cartão da noiva', 840.00, '/gifts/memes/fatura-cartao-noiva.jpg'),
+  ('Ajuda na aposentadoria do casal', 960.43, '/gifts/memes/aposentadoria-casal.jpg'),
+  ('Deus tocou no seu coração', 1000.00, '/gifts/memes/deus-tocou-coracao.jpg'),
+  ('Passeio de balão para esquecer a fatura do cartão', 1480.63, '/gifts/memes/passeio-balao.jpg');

@@ -8,16 +8,23 @@ interface Photo {
 }
 
 const photos: Photo[] = [
-  { src: "/photos/d52d772e-b63f-4562-bc09-5a684030720d.jpg", alt: "Poliete & Ygor juntos" },
-  { src: "/photos/IMG_3300.jpg", alt: "Jantar romantico" },
-  { src: "/photos/IMG_0373.jpg", alt: "Viagem a Guaruja" },
-  { src: "/photos/IMG_3018.jpg", alt: "Dia de sol no pier" },
-  { src: "/photos/IMG_3919.jpg", alt: "Noite com vista da cidade" },
-  { src: "/photos/IMG_3792.jpg", alt: "Diversao em Monte Verde" },
-  { src: "/photos/IMG_1131.jpg", alt: "Aventura na neve" },
-  { src: "/photos/4775766C-BD20-4219-9ACA-A2126638A755.jpg", alt: "Las Lenas, Argentina" },
-  { src: "/photos/IMG_3837.jpg", alt: "Icebar" },
-  { src: "/photos/IMG_4682.jpg", alt: "Familia reunida" },
+  { src: "/photos/261caf42-9b6b-4186-8fa7-b4a72f9c2775.JPG", alt: "Passeio romantico a noite" },
+  { src: "/photos/494c38ba-bf30-4884-bd7e-5749ee9360db.JPG", alt: "Dia de praia juntos" },
+  { src: "/photos/21028ae6-43ef-42c1-9f7e-00f264de6318.JPG", alt: "Paraiso tropical" },
+  { src: "/photos/1b478f5d-579d-45ab-8744-c8e8f9b15eee.JPG", alt: "Las Lenas, Argentina" },
+  { src: "/photos/0eba191d-2e64-462d-b859-bd60c8112ee0.JPG", alt: "Aventura no esqui" },
+  { src: "/photos/49405bdd-a2c1-45b7-acdf-1acc9fd43ca0.JPG", alt: "Montanhas da Argentina" },
+  { src: "/photos/bb8cdccf-adaa-4354-b438-f7a1ea4e659c.JPG", alt: "Mendoza, Argentina" },
+  { src: "/photos/5db6e010-5098-4781-aef0-92aafe308659.JPG", alt: "Fonte em Buenos Aires" },
+  { src: "/photos/ec4fcbad-0fc8-43a0-9473-8bd13ce76b4c.JPG", alt: "Estrada nevada" },
+  { src: "/photos/a6d07b5e-d953-4997-8900-e2836dcc3cda.JPG", alt: "Las Lenas, na neve" },
+  { src: "/photos/71be7a69-8920-401e-a46d-429668147171.JPG", alt: "Costao rochoso" },
+  { src: "/photos/6c54391c-d829-4ef3-b632-1795d07a6017.JPG", alt: "Rua dos guarda-chuvas" },
+  { src: "/photos/96a5394f-8cc2-4d70-85ab-ad89c8cefc42.JPG", alt: "Noite em Monte Verde" },
+  { src: "/photos/725bc4e5-8b11-45eb-94e0-59ec38992868.JPG", alt: "Vale do Bom Jardim" },
+  { src: "/photos/adb11bd4-54dd-43a4-a41b-972d3471fe92.JPG", alt: "Icebar Monte Verde" },
+  { src: "/photos/b052f838-dce6-4664-861b-c7816caa31c2.JPG", alt: "Urso gigante de pelucia" },
+  { src: "/photos/c2bea460-0bdc-447f-a3e6-11f98a329613.JPG", alt: "Pousada do Aviao" },
 ];
 
 const swipeConfidenceThreshold = 10000;
