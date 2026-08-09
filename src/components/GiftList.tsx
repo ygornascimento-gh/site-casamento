@@ -150,7 +150,7 @@ const GiftList = () => {
                   <img
                     src="/gifts/memes/pix-prosperidade.jpg"
                     alt="Pix da Prosperidade"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover object-top"
                   />
                 </div>
                 <div className="p-5 text-center">
