@@ -2,22 +2,22 @@ import { useState, useEffect } from "react";
 import AnimatedSection from "./AnimatedSection";
 import { supabase } from "@/lib/supabase";
 import type { Presente } from "@/types";
-import { Gift, Check, Loader2, X, Copy, Heart } from "lucide-react";
-
-const PIX_KEY = import.meta.env.VITE_PIX_KEY || "";
+import { Gift, Check, Loader2, X, Heart, MessageCircle } from "lucide-react";
 
 const GiftList = () => {
   const [gifts, setGifts] = useState<Presente[]>([]);
   const [loading, setLoading] = useState(true);
   const [reserving, setReserving] = useState<string | null>(null);
+  const [reservingPix, setReservingPix] = useState(false);
   const [reserveName, setReserveName] = useState("");
+  const [reservePhone, setReservePhone] = useState("");
   const [submitting, setSubmitting] = useState(false);
   const [reserveError, setReserveError] = useState("");
-  const [showPix, setShowPix] = useState(false);
-  const [pixCopied, setPixCopied] = useState(false);
+  const [whatsappNoivo, setWhatsappNoivo] = useState("");
 
   useEffect(() => {
     fetchGifts();
+    fetchConfig();
   }, []);
 
   const fetchGifts = async () => {
@@ -29,14 +29,44 @@ const GiftList = () => {
     setLoading(false);
   };
 
+  const fetchConfig = async () => {
+    const { data } = await supabase
+      .from("configuracao")
+      .select("valor")
+      .eq("chave", "whatsapp_noivo")
+      .single();
+    if (data) setWhatsappNoivo(data.valor);
+  };
+
+  const formatPhone = (value: string) => {
+    const digits = value.replace(/\D/g, "").slice(0, 11);
+    if (digits.length <= 2) return digits;
+    if (digits.length <= 7) return `(${digits.slice(0, 2)}) ${digits.slice(2)}`;
+    return `(${digits.slice(0, 2)}) ${digits.slice(2, 7)}-${digits.slice(7)}`;
+  };
+
+  const getPhoneDigits = (phone: string) => phone.replace(/\D/g, "");
+
+  const redirectToWhatsApp = (giftName: string, name: string) => {
+    if (!whatsappNoivo) return;
+    const message = encodeURIComponent(
+      `Olá! Sou *${name}* e quero presentear vocês com *${giftName}*. Pode me enviar a chave PIX para eu fazer o pagamento? 🎁`
+    );
+    window.open(`https://wa.me/${whatsappNoivo}?text=${message}`, "_blank");
+  };
+
   const handleReserve = async () => {
-    if (!reserving || !reserveName.trim()) return;
+    if (!reserving || !reserveName.trim() || getPhoneDigits(reservePhone).length < 10) return;
     setSubmitting(true);
     setReserveError("");
 
     const { error } = await supabase
       .from("presentes")
-      .update({ reservado_por: reserveName.trim(), reservado_em: new Date().toISOString() })
+      .update({
+        reservado_por: reserveName.trim(),
+        telefone_reserva: getPhoneDigits(reservePhone),
+        reservado_em: new Date().toISOString(),
+      })
       .eq("id", reserving)
       .is("reservado_por", null);
 
@@ -47,6 +77,8 @@ const GiftList = () => {
       return;
     }
 
+    const gift = gifts.find((g) => g.id === reserving);
+
     setGifts((prev) =>
       prev.map((g) =>
         g.id === reserving
@@ -55,13 +87,24 @@ const GiftList = () => {
       )
     );
 
-    setReserving(null);
-    setReserveName("");
+    if (gift) redirectToWhatsApp(gift.nome, reserveName.trim());
+
+    closeModal();
+  };
+
+  const handlePixReserve = () => {
+    if (!reserveName.trim() || getPhoneDigits(reservePhone).length < 10) return;
+    setSubmitting(true);
+    redirectToWhatsApp("Pix da Prosperidade", reserveName.trim());
+    setSubmitting(false);
+    closeModal();
   };
 
   const closeModal = () => {
     setReserving(null);
+    setReservingPix(false);
     setReserveName("");
+    setReservePhone("");
     setReserveError("");
   };
 
@@ -69,6 +112,8 @@ const GiftList = () => {
     if (!value) return "";
     return new Intl.NumberFormat("pt-BR", { style: "currency", currency: "BRL" }).format(value);
   };
+
+  const isFormValid = reserveName.trim().length > 0 && getPhoneDigits(reservePhone).length >= 10;
 
   return (
     <section id="presentes" className="py-20 md:py-32 bg-wedding-cream-dark/50">
@@ -165,7 +210,7 @@ const GiftList = () => {
                   </p>
                   <div className="mt-4">
                     <button
-                      onClick={() => setShowPix(true)}
+                      onClick={() => setReservingPix(true)}
                       className="w-full bg-wedding-rose text-white py-2 rounded-full text-sm font-medium hover:bg-wedding-rose-dark transition-colors"
                     >
                       Enviar Pix
@@ -178,56 +223,7 @@ const GiftList = () => {
         )}
       </div>
 
-      {showPix && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm px-4">
-          <div className="bg-white rounded-2xl p-6 max-w-sm w-full shadow-xl relative">
-            <button
-              onClick={() => { setShowPix(false); setPixCopied(false); }}
-              className="absolute top-4 right-4 text-wedding-text-muted hover:text-wedding-text"
-              aria-label="Fechar"
-            >
-              <X size={20} />
-            </button>
-            <div className="text-center">
-              <Heart size={32} className="text-wedding-rose mx-auto mb-3" fill="currentColor" />
-              <h3 className="font-serif text-xl font-semibold text-wedding-text mb-2">
-                Pix da Prosperidade
-              </h3>
-              <p className="text-sm text-wedding-text-muted mb-5">
-                Faça um PIX do seu coração para os 'Bem Casadinhos'! Valor mínimo sugerido: R$ 100,00
-              </p>
-              {PIX_KEY ? (
-                <>
-                  <p className="text-xs text-wedding-text-muted mb-2">Chave Pix (CPF):</p>
-                  <div className="flex items-center gap-2 bg-wedding-cream-dark rounded-xl px-4 py-3 mb-4">
-                    <span className="flex-1 font-mono text-sm text-wedding-text select-all">{PIX_KEY}</span>
-                    <button
-                      onClick={() => {
-                        navigator.clipboard.writeText(PIX_KEY);
-                        setPixCopied(true);
-                        setTimeout(() => setPixCopied(false), 2000);
-                      }}
-                      className="text-wedding-rose hover:text-wedding-rose-dark transition-colors"
-                      aria-label="Copiar chave Pix"
-                    >
-                      {pixCopied ? <Check size={18} /> : <Copy size={18} />}
-                    </button>
-                  </div>
-                  {pixCopied && (
-                    <p className="text-sm text-wedding-sage-dark font-medium">Chave copiada!</p>
-                  )}
-                </>
-              ) : (
-                <p className="text-sm text-wedding-text-muted italic">
-                  A chave Pix será disponibilizada em breve!
-                </p>
-              )}
-            </div>
-          </div>
-        </div>
-      )}
-
-      {reserving && (
+      {(reserving || reservingPix) && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm px-4">
           <div className="bg-white rounded-2xl p-6 max-w-sm w-full shadow-xl relative">
             <button
@@ -237,28 +233,56 @@ const GiftList = () => {
             >
               <X size={20} />
             </button>
-            <h3 className="font-serif text-xl font-semibold text-wedding-text mb-2">
-              Reservar Presente
+
+            {reservingPix ? (
+              <Heart size={28} className="text-wedding-rose mx-auto mb-2" fill="currentColor" />
+            ) : null}
+
+            <h3 className="font-serif text-xl font-semibold text-wedding-text mb-2 text-center">
+              {reservingPix ? "Pix da Prosperidade" : "Reservar Presente"}
             </h3>
-            <p className="text-sm text-wedding-text-muted mb-4">
-              Informe seu nome para reservar este item:
+            <p className="text-sm text-wedding-text-muted mb-5 text-center">
+              {reservingPix
+                ? "Informe seus dados para receber a chave PIX pelo WhatsApp do noivo:"
+                : "Informe seus dados para reservar este presente:"}
             </p>
+
             <input
               type="text"
               value={reserveName}
               onChange={(e) => setReserveName(e.target.value)}
               placeholder="Seu nome"
+              className="w-full px-4 py-3 rounded-xl border border-wedding-gold/20 bg-white text-wedding-text placeholder:text-wedding-text-muted/50 focus:outline-none focus:ring-2 focus:ring-wedding-rose/30 mb-3"
+            />
+            <input
+              type="tel"
+              value={reservePhone}
+              onChange={(e) => setReservePhone(formatPhone(e.target.value))}
+              placeholder="Seu telefone (DDD + número)"
               className="w-full px-4 py-3 rounded-xl border border-wedding-gold/20 bg-white text-wedding-text placeholder:text-wedding-text-muted/50 focus:outline-none focus:ring-2 focus:ring-wedding-rose/30 mb-4"
             />
+
             {reserveError && (
               <p className="text-sm text-red-500 text-center mb-4">{reserveError}</p>
             )}
+
+            {!whatsappNoivo && (
+              <p className="text-sm text-wedding-text-muted italic text-center mb-4">
+                O pagamento via WhatsApp estará disponível em breve!
+              </p>
+            )}
+
             <button
-              onClick={handleReserve}
-              disabled={!reserveName.trim() || submitting}
-              className="w-full bg-wedding-rose text-white py-3 rounded-full font-medium hover:bg-wedding-rose-dark transition-colors disabled:opacity-60"
+              onClick={reservingPix ? handlePixReserve : handleReserve}
+              disabled={!isFormValid || submitting || !whatsappNoivo}
+              className="w-full bg-green-600 text-white py-3 rounded-full font-medium hover:bg-green-700 transition-colors disabled:opacity-60 flex items-center justify-center gap-2"
             >
-              {submitting ? "Reservando..." : "Confirmar Reserva"}
+              <MessageCircle size={18} />
+              {submitting
+                ? "Processando..."
+                : reservingPix
+                  ? "Receber chave PIX via WhatsApp"
+                  : "Reservar e receber PIX via WhatsApp"}
             </button>
           </div>
         </div>

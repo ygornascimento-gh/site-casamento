@@ -17,6 +17,7 @@ export interface Presente {
   valor: number | null;
   imagem_url: string | null;
   reservado_por: string | null;
+  telefone_reserva: string | null;
   reservado_em: string | null;
   created_at: string;
 }

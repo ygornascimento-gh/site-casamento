@@ -45,6 +45,11 @@ CREATE TABLE mural (
   created_at TIMESTAMPTZ DEFAULT now()
 );
 
+CREATE TABLE configuracao (
+  chave TEXT PRIMARY KEY,
+  valor TEXT NOT NULL
+);
+
 -- ============================================================
 -- Enable Row Level Security
 -- ============================================================
@@ -52,6 +57,7 @@ CREATE TABLE mural (
 ALTER TABLE rsvp ENABLE ROW LEVEL SECURITY;
 ALTER TABLE presentes ENABLE ROW LEVEL SECURITY;
 ALTER TABLE mural ENABLE ROW LEVEL SECURITY;
+ALTER TABLE configuracao ENABLE ROW LEVEL SECURITY;
 
 -- ============================================================
 -- RLS Policies: rsvp
@@ -79,6 +85,16 @@ CREATE POLICY "Allow reserve unreserved gift"
   TO anon
   USING (reservado_por IS NULL)
   WITH CHECK (reservado_por IS NOT NULL);
+
+-- ============================================================
+-- RLS Policies: configuracao
+-- ============================================================
+
+-- Public (anon) can only read config values
+CREATE POLICY "Allow public select on configuracao"
+  ON configuracao FOR SELECT
+  TO anon
+  USING (true);
 
 -- ============================================================
 -- RLS Policies: mural
