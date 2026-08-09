@@ -82,35 +82,6 @@ const GiftList = () => {
           </p>
         </AnimatedSection>
 
-        <AnimatedSection>
-          <div className="mb-12 max-w-md mx-auto">
-            <div className="rounded-2xl border-2 border-wedding-rose/20 bg-gradient-to-br from-wedding-rose/5 to-wedding-gold/5 overflow-hidden">
-              <div className="h-40 bg-gradient-to-br from-wedding-rose/20 to-wedding-gold/20 flex items-center justify-center">
-                <Heart size={56} className="text-wedding-rose" fill="currentColor" />
-              </div>
-              <div className="p-6 text-center">
-                <h3 className="font-serif text-xl font-semibold text-wedding-text">
-                  Pix da Prosperidade
-                </h3>
-                <p className="text-sm text-wedding-text-muted mt-2">
-                  Faça um Pix do seu coração para os noivos
-                </p>
-                <p className="text-sm font-medium text-wedding-gold mt-2">
-                  A partir de R$ 100,00
-                </p>
-                <div className="mt-4">
-                  <button
-                    onClick={() => setShowPix(true)}
-                    className="w-full bg-wedding-rose text-white py-2.5 rounded-full text-sm font-medium hover:bg-wedding-rose-dark transition-colors"
-                  >
-                    Enviar Pix
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </AnimatedSection>
-
         {loading ? (
           <div className="flex justify-center py-12">
             <Loader2 size={32} className="animate-spin text-wedding-rose" />
@@ -173,6 +144,32 @@ const GiftList = () => {
                 </AnimatedSection>
               );
             })}
+            <AnimatedSection delay={gifts.length * 0.05}>
+              <div className="rounded-2xl border-2 border-wedding-rose/20 bg-gradient-to-br from-wedding-rose/5 to-wedding-gold/5 overflow-hidden">
+                <div className="h-40 bg-gradient-to-br from-wedding-rose/20 to-wedding-gold/20 flex items-center justify-center">
+                  <Heart size={56} className="text-wedding-rose" fill="currentColor" />
+                </div>
+                <div className="p-5 text-center">
+                  <h3 className="font-serif text-lg font-semibold text-wedding-text">
+                    Pix da Prosperidade
+                  </h3>
+                  <p className="text-sm text-wedding-text-muted mt-1">
+                    Faça um Pix do seu coração para os noivos
+                  </p>
+                  <p className="text-sm font-medium text-wedding-gold mt-2">
+                    A partir de R$ 100,00
+                  </p>
+                  <div className="mt-4">
+                    <button
+                      onClick={() => setShowPix(true)}
+                      className="w-full bg-wedding-rose text-white py-2 rounded-full text-sm font-medium hover:bg-wedding-rose-dark transition-colors"
+                    >
+                      Enviar Pix
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </AnimatedSection>
           </div>
         )}
       </div>
