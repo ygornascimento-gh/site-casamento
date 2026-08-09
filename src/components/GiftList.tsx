@@ -146,8 +146,12 @@ const GiftList = () => {
             })}
             <AnimatedSection delay={gifts.length * 0.05}>
               <div className="rounded-2xl border-2 border-wedding-rose/20 bg-gradient-to-br from-wedding-rose/5 to-wedding-gold/5 overflow-hidden">
-                <div className="h-40 bg-gradient-to-br from-wedding-rose/20 to-wedding-gold/20 flex items-center justify-center">
-                  <Heart size={56} className="text-wedding-rose" fill="currentColor" />
+                <div className="h-40 flex items-center justify-center">
+                  <img
+                    src="/gifts/memes/pix-prosperidade.jpg"
+                    alt="Pix da Prosperidade"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <div className="p-5 text-center">
                   <h3 className="font-serif text-lg font-semibold text-wedding-text">
