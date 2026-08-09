@@ -23,7 +23,7 @@ const GiftList = () => {
   const fetchGifts = async () => {
     const { data } = await supabase
       .from("presentes")
-      .select("*")
+      .select("id, nome, descricao, valor, imagem_url, reservado_por, reservado_em, created_at")
       .order("created_at", { ascending: true });
     setGifts(data ?? []);
     setLoading(false);
