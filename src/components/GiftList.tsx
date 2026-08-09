@@ -2,7 +2,9 @@ import { useState, useEffect } from "react";
 import AnimatedSection from "./AnimatedSection";
 import { supabase } from "@/lib/supabase";
 import type { Presente } from "@/types";
-import { Gift, Check, Loader2, X } from "lucide-react";
+import { Gift, Check, Loader2, X, Copy, Heart } from "lucide-react";
+
+const PIX_KEY = import.meta.env.VITE_PIX_KEY || "";
 
 const GiftList = () => {
   const [gifts, setGifts] = useState<Presente[]>([]);
@@ -11,6 +13,8 @@ const GiftList = () => {
   const [reserveName, setReserveName] = useState("");
   const [submitting, setSubmitting] = useState(false);
   const [reserveError, setReserveError] = useState("");
+  const [showPix, setShowPix] = useState(false);
+  const [pixCopied, setPixCopied] = useState(false);
 
   useEffect(() => {
     fetchGifts();
@@ -78,6 +82,35 @@ const GiftList = () => {
           </p>
         </AnimatedSection>
 
+        <AnimatedSection>
+          <div className="mb-12 max-w-md mx-auto">
+            <div className="rounded-2xl border-2 border-wedding-rose/20 bg-gradient-to-br from-wedding-rose/5 to-wedding-gold/5 overflow-hidden">
+              <div className="h-40 bg-gradient-to-br from-wedding-rose/20 to-wedding-gold/20 flex items-center justify-center">
+                <Heart size={56} className="text-wedding-rose" fill="currentColor" />
+              </div>
+              <div className="p-6 text-center">
+                <h3 className="font-serif text-xl font-semibold text-wedding-text">
+                  Pix da Prosperidade
+                </h3>
+                <p className="text-sm text-wedding-text-muted mt-2">
+                  Faça um Pix do seu coração para os noivos
+                </p>
+                <p className="text-sm font-medium text-wedding-gold mt-2">
+                  A partir de R$ 100,00
+                </p>
+                <div className="mt-4">
+                  <button
+                    onClick={() => setShowPix(true)}
+                    className="w-full bg-wedding-rose text-white py-2.5 rounded-full text-sm font-medium hover:bg-wedding-rose-dark transition-colors"
+                  >
+                    Enviar Pix
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </AnimatedSection>
+
         {loading ? (
           <div className="flex justify-center py-12">
             <Loader2 size={32} className="animate-spin text-wedding-rose" />
@@ -143,6 +176,55 @@ const GiftList = () => {
           </div>
         )}
       </div>
+
+      {showPix && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm px-4">
+          <div className="bg-white rounded-2xl p-6 max-w-sm w-full shadow-xl relative">
+            <button
+              onClick={() => { setShowPix(false); setPixCopied(false); }}
+              className="absolute top-4 right-4 text-wedding-text-muted hover:text-wedding-text"
+              aria-label="Fechar"
+            >
+              <X size={20} />
+            </button>
+            <div className="text-center">
+              <Heart size={32} className="text-wedding-rose mx-auto mb-3" fill="currentColor" />
+              <h3 className="font-serif text-xl font-semibold text-wedding-text mb-2">
+                Pix da Prosperidade
+              </h3>
+              <p className="text-sm text-wedding-text-muted mb-5">
+                Faça um Pix do seu coração para os noivos! Valor mínimo sugerido: R$ 100,00
+              </p>
+              {PIX_KEY ? (
+                <>
+                  <p className="text-xs text-wedding-text-muted mb-2">Chave Pix (CPF):</p>
+                  <div className="flex items-center gap-2 bg-wedding-cream-dark rounded-xl px-4 py-3 mb-4">
+                    <span className="flex-1 font-mono text-sm text-wedding-text select-all">{PIX_KEY}</span>
+                    <button
+                      onClick={() => {
+                        navigator.clipboard.writeText(PIX_KEY);
+                        setPixCopied(true);
+                        setTimeout(() => setPixCopied(false), 2000);
+                      }}
+                      className="text-wedding-rose hover:text-wedding-rose-dark transition-colors"
+                      aria-label="Copiar chave Pix"
+                    >
+                      {pixCopied ? <Check size={18} /> : <Copy size={18} />}
+                    </button>
+                  </div>
+                  {pixCopied && (
+                    <p className="text-sm text-wedding-sage-dark font-medium">Chave copiada!</p>
+                  )}
+                </>
+              ) : (
+                <p className="text-sm text-wedding-text-muted italic">
+                  A chave Pix será disponibilizada em breve!
+                </p>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
 
       {reserving && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm px-4">
