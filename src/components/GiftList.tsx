@@ -206,7 +206,7 @@ const GiftList = () => {
                     Faça um PIX do seu coração para os 'Bem Casadinhos'
                   </p>
                   <p className="text-sm font-medium text-wedding-gold mt-2">
-                    A partir de R$ 100,00
+                    A partir de R$ 150,00
                   </p>
                   <div className="mt-4">
                     <button
