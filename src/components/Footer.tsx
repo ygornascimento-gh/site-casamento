@@ -13,7 +13,7 @@ const Footer = () => (
         Feito com <Heart size={12} className="text-wedding-rose fill-wedding-rose" /> para o nosso grande dia
       </p>
       <p className="mt-4 text-sm font-medium text-wedding-gold">
-        #PolieteeYgor
+        #PolieteYgor
       </p>
     </div>
   </footer>
