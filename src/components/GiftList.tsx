@@ -148,7 +148,7 @@ const GiftList = () => {
               <div className="rounded-2xl border-2 border-wedding-rose/20 bg-gradient-to-br from-wedding-rose/5 to-wedding-gold/5 overflow-hidden">
                 <div className="h-40 flex items-center justify-center">
                   <img
-                    src="/gifts/memes/pix-prosperidade.png"
+                    src="/gifts/memes/pix-prosperidade.jpg"
                     alt="Pix da Prosperidade"
                     className="w-full h-full object-cover object-top"
                   />
