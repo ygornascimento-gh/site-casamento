@@ -71,7 +71,7 @@ const RSVP = () => {
             <div className="w-16 h-16 mx-auto rounded-full bg-wedding-sage/20 flex items-center justify-center mb-6">
               <Check size={32} className="text-wedding-sage-dark" />
             </div>
-            <h2 className="font-script text-4xl text-wedding-rose mb-4">Obrigado!</h2>
+            <h2 className="font-script text-5xl md:text-7xl text-wedding-rose mb-4">Obrigado!</h2>
             <p className="text-wedding-text-muted">
               Sua presença foi confirmada. Mal podemos esperar para celebrar com você!
             </p>
@@ -85,7 +85,7 @@ const RSVP = () => {
     <section id="rsvp" className="py-20 md:py-32">
       <div className="container max-w-lg">
         <AnimatedSection>
-          <h2 className="font-script text-4xl md:text-5xl text-wedding-rose text-center mb-4">
+          <h2 className="font-script text-5xl md:text-7xl text-wedding-rose text-center mb-4">
             Confirme sua Presença
           </h2>
           <p className="text-center text-wedding-text-muted mb-12">

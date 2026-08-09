@@ -119,7 +119,7 @@ const GiftList = () => {
     <section id="presentes" className="py-20 md:py-32 bg-wedding-cream-dark/50">
       <div className="container max-w-5xl">
         <AnimatedSection>
-          <h2 className="font-script text-4xl md:text-5xl text-wedding-rose text-center mb-4">
+          <h2 className="font-script text-5xl md:text-7xl text-wedding-rose text-center mb-4">
             Lista de Presentes
           </h2>
           <p className="text-center text-wedding-text-muted mb-16">
