@@ -126,11 +126,7 @@ const MessageWall = () => {
               </AnimatedSection>
             ))}
           </div>
-        ) : (
-          <p className="text-center text-wedding-text-muted text-sm">
-            Seja o primeiro a deixar uma mensagem!
-          </p>
-        )}
+        ) : null}
       </div>
     </section>
   );
