@@ -158,7 +158,7 @@ const GiftList = () => {
                     Pix da Prosperidade
                   </h3>
                   <p className="text-sm text-wedding-text-muted mt-1">
-                    Faça um Pix do seu coração para os noivos
+                    Faça um PIX do seu coração para os 'Bem Casadinhos'
                   </p>
                   <p className="text-sm font-medium text-wedding-gold mt-2">
                     A partir de R$ 100,00
@@ -194,7 +194,7 @@ const GiftList = () => {
                 Pix da Prosperidade
               </h3>
               <p className="text-sm text-wedding-text-muted mb-5">
-                Faça um Pix do seu coração para os noivos! Valor mínimo sugerido: R$ 100,00
+                Faça um PIX do seu coração para os 'Bem Casadinhos'! Valor mínimo sugerido: R$ 100,00
               </p>
               {PIX_KEY ? (
                 <>
