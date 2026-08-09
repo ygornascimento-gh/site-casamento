@@ -16,8 +16,8 @@ export default {
       },
       colors: {
         wedding: {
-          rose: "#F2B5C8",
-          "rose-dark": "#E89AB0",
+          rose: "#D4728C",
+          "rose-dark": "#B85A74",
           sage: "#A8B5A0",
           "sage-dark": "#8FA386",
           cream: "#FDF8F5",
