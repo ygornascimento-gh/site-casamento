@@ -165,7 +165,7 @@ const GiftList = () => {
                         <p className="text-sm text-wedding-text-muted mt-1">{gift.descricao}</p>
                       )}
                       {gift.valor && (
-                        <p className="text-sm font-medium text-wedding-gold mt-2">
+                        <p className="text-base font-medium text-wedding-gold mt-2">
                           {formatCurrency(gift.valor)}
                         </p>
                       )}
@@ -205,7 +205,7 @@ const GiftList = () => {
                   <p className="text-sm text-wedding-text-muted mt-1">
                     Faça um PIX do seu coração para os 'Bem Casadinhos'
                   </p>
-                  <p className="text-sm font-medium text-wedding-gold mt-2">
+                  <p className="text-base font-medium text-wedding-gold mt-2">
                     A partir de R$ 150,00
                   </p>
                   <div className="mt-4">
