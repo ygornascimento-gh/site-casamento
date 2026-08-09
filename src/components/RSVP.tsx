@@ -143,39 +143,6 @@ const RSVP = () => {
             </div>
 
             <div>
-              <label htmlFor="acompanhantes" className="block text-sm font-medium text-wedding-text mb-1">
-                Acompanhantes
-              </label>
-              <select
-                id="acompanhantes"
-                name="acompanhantes"
-                value={form.acompanhantes}
-                onChange={handleChange}
-                className="w-full px-4 py-3 rounded-xl border border-wedding-gold/20 bg-white/80 text-wedding-text focus:outline-none focus:ring-2 focus:ring-wedding-rose/30"
-              >
-                <option value={0}>Somente eu</option>
-                <option value={1}>+1 acompanhante</option>
-                <option value={2}>+2 acompanhantes</option>
-                <option value={3}>+3 acompanhantes</option>
-              </select>
-            </div>
-
-            <div>
-              <label htmlFor="restricoes_alimentares" className="block text-sm font-medium text-wedding-text mb-1">
-                Restrições alimentares
-              </label>
-              <input
-                id="restricoes_alimentares"
-                name="restricoes_alimentares"
-                type="text"
-                value={form.restricoes_alimentares}
-                onChange={handleChange}
-                className="w-full px-4 py-3 rounded-xl border border-wedding-gold/20 bg-white/80 text-wedding-text placeholder:text-wedding-text-muted/50 focus:outline-none focus:ring-2 focus:ring-wedding-rose/30"
-                placeholder="Vegetariano, intolerância a lactose, etc."
-              />
-            </div>
-
-            <div>
               <label htmlFor="mensagem" className="block text-sm font-medium text-wedding-text mb-1">
                 Mensagem para os noivos
               </label>
