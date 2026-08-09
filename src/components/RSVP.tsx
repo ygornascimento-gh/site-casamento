@@ -75,6 +75,9 @@ const RSVP = () => {
             <p className="text-wedding-text-muted">
               Sua presença foi confirmada. Mal podemos esperar para celebrar com você!
             </p>
+            <p className="text-wedding-text-muted mt-4">
+              Que tal reservar um presentinho para os noivos agora?
+            </p>
           </AnimatedSection>
         </div>
       </section>
