@@ -46,7 +46,8 @@ const RSVP = () => {
     setLoading(false);
 
     if (dbError) {
-      setError("Ocorreu um erro ao enviar. Tente novamente.");
+      console.error("RSVP error:", dbError);
+      setError(`Erro: ${dbError.message}`);
       return;
     }
 
