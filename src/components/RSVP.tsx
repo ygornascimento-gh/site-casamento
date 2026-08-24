@@ -7,8 +7,6 @@ interface FormData {
   nome: string;
   email: string;
   telefone: string;
-  acompanhantes: number;
-  restricoes_alimentares: string;
   mensagem: string;
 }
 
@@ -16,8 +14,6 @@ const INITIAL_FORM: FormData = {
   nome: "",
   email: "",
   telefone: "",
-  acompanhantes: 0,
-  restricoes_alimentares: "",
   mensagem: "",
 };
 
@@ -28,13 +24,10 @@ const RSVP = () => {
   const [error, setError] = useState("");
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     const { name, value } = e.target;
-    setForm((prev) => ({
-      ...prev,
-      [name]: name === "acompanhantes" ? Number(value) : value,
-    }));
+    setForm((prev) => ({ ...prev, [name]: value }));
   };
 
   const handleSubmit = async (e: FormEvent) => {
@@ -46,8 +39,6 @@ const RSVP = () => {
       nome: form.nome,
       email: form.email || null,
       telefone: form.telefone || null,
-      acompanhantes: form.acompanhantes,
-      restricoes_alimentares: form.restricoes_alimentares || null,
       mensagem: form.mensagem || null,
       confirmado: true,
     });
