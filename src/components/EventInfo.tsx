@@ -11,7 +11,7 @@ const cards: InfoCard[] = [
   {
     icon: Clock,
     title: "Cerimônia",
-    lines: ["16:00", "18 de Setembro de 2026"],
+    lines: ["16:30", "18 de Setembro de 2026"],
   },
   {
     icon: PartyPopper,
@@ -26,7 +26,7 @@ const cards: InfoCard[] = [
   {
     icon: Shirt,
     title: "Dress Code",
-    lines: ["Traje Social", "Cores claras"],
+    lines: ["Traje Social"],
   },
 ];
 

@@ -3,7 +3,7 @@ import BranchLeft from "@/assets/florals/branch-left";
 import BranchRight from "@/assets/florals/branch-right";
 import { useCountdown } from "@/hooks/useCountdown";
 
-const WEDDING_DATE = new Date("2026-09-18T16:00:00");
+const WEDDING_DATE = new Date("2026-09-18T16:30:00");
 
 const CountdownUnit = ({ value, label }: { value: number; label: string }) => (
   <div className="flex flex-col items-center">
